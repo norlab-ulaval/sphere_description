@@ -8,14 +8,31 @@
   <link name="lidar_link"/>
   <link name="xsens_link" />
   <link name="vectornav_link"/>
+  <link name="pressure_sensor_link"/>
 
   <!-- Joints -->
-<!--
+
   <joint name="lidar_base_joint" type="fixed">
-    <origin xyz="0 0 0.145700" rpy="0 0 0" />
-    <parent link="sensor_rack" />
+    <origin xyz="0 0 0.0" rpy="0 0 0" />
+    <parent link="base_link" />
     <child link="lidar_link" />
   </joint>
--->
 
+  <joint name="xsens_base_joint" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="xsens_link" />
+  </joint>
+  
+  <joint name="vectornav_base_joint" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="vectornav_link" />
+  </joint>
+  
+  <joint name="pressure_sensor_base_joint" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="pressure_sensor_link" />
+  </joint>
 </robot>
