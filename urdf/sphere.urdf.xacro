@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<robot name="sphere" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="M_PI" value="3.14159"/>
+
+  <!-- Links -->
+  <link name="base_link"/>
+  <link name="lidar_link"/>
+  <link name="xsens_link" />
+  <link name="vectornav_link"/>
+
+  <!-- Joints -->
+<!--
+  <joint name="lidar_base_joint" type="fixed">
+    <origin xyz="0 0 0.145700" rpy="0 0 0" />
+    <parent link="sensor_rack" />
+    <child link="lidar_link" />
+  </joint>
+-->
+
+</robot>
