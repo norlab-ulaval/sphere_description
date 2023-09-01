@@ -1,38 +1,446 @@
-<?xml version="1.0"?>
+<robot name="sphere">
+<link name="base_link">
+<visual>
+<origin xyz="0.10027692321656980767 0.038377640147504381296 0.0073000000000000000652" rpy="0 -0 2.356194490192344837" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/y.stl"/>
+</geometry>
+<material name="y_material">
+<color rgba="0.37254901960784314596 0.65490196078431373028 0.23921568627450981448 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10027692321656980767 0.038377640147504381296 0.0073000000000000000652" rpy="0 -0 2.356194490192344837" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/y.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/x.stl"/>
+</geometry>
+<material name="x_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/x.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.10027692321656980767 0.038377640147504381296 0.0073000000000000000652" rpy="0 -0 2.356194490192344837" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/x.stl"/>
+</geometry>
+<material name="x_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10027692321656980767 0.038377640147504381296 0.0073000000000000000652" rpy="0 -0 2.356194490192344837" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/x.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/lidar_imu_mount.stl"/>
+</geometry>
+<material name="lidar_imu_mount_material">
+<color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/lidar_imu_mount.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/y.stl"/>
+</geometry>
+<material name="y_material">
+<color rgba="0.37254901960784314596 0.65490196078431373028 0.23921568627450981448 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/y.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-6.2507961992595927751e-18 -1.9283581408392350414e-17 0.044799999999999992606" rpy="-3.8178057146738142882e-16 1.9801001019629697756e-16 2.7925268031909280531" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/x.stl"/>
+</geometry>
+<material name="x_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-6.2507961992595927751e-18 -1.9283581408392350414e-17 0.044799999999999992606" rpy="-3.8178057146738142882e-16 1.9801001019629697756e-16 2.7925268031909280531" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/x.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-6.2507961992595927751e-18 -1.9283581408392350414e-17 0.044799999999999992606" rpy="-3.8178057146738142882e-16 1.9801001019629697756e-16 2.7925268031909280531" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/y.stl"/>
+</geometry>
+<material name="y_material">
+<color rgba="0.37254901960784314596 0.65490196078431373028 0.23921568627450981448 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-6.2507961992595927751e-18 -1.9283581408392350414e-17 0.044799999999999992606" rpy="-3.8178057146738142882e-16 1.9801001019629697756e-16 2.7925268031909280531" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/y.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
 
-<robot name="sphere" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:property name="M_PI" value="3.14159"/>
+<link name="xsens_body">
+<visual>
+<origin xyz="-0.10027692321656977992 -0.038377640147504360479 -0.0050000000000000001041" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/xsens_body.stl"/>
+</geometry>
+<material name="xsens_body_material">
+<color rgba="0.72941176470588231506 0.35686274509803922461 0.023529411764705882026 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.10027692321656977992 -0.038377640147504360479 -0.0050000000000000001041" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/xsens_body.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
 
-  <!-- Links -->
-  <link name="base_link"/>
-  <link name="lidar_link"/>
-  <link name="xsens_link" />
-  <link name="vectornav_link"/>
-  <link name="pressure_sensor_link"/>
+<link name="xsens">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="0" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="xsens_frame" type="fixed">
+<origin xyz="1.3877787807814456755e-17 1.3877787807814456755e-17 0.0022999999999999999611" rpy="0 -0 2.356194490192344837" />
+<parent link="xsens_body" />
+<child link="xsens" />
+<axis xyz="0 0 0"/>
+</joint>
 
-  <!-- Joints -->
+<joint name="xsens_base_joint" type="fixed">
+<origin xyz="0.1002769232165697938 0.038377640147504367418 0.0050000000000000001041" rpy="0 -0 0" />
+<parent link="base_link" />
+<child link="xsens_body" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
 
-  <joint name="lidar_base_joint" type="fixed">
-    <origin xyz="0 0 0.0398" rpy="0 0 0" />
-    <parent link="base_link" />
-    <child link="lidar_link" />
-  </joint>
+<link name="vn100_base">
+<visual>
+<origin xyz="-0.057102309884864574374 0.049250000000000009048 -0.0050000000000000001041" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/vn100_base.stl"/>
+</geometry>
+<material name="vn100_base_material">
+<color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.057102309884864574374 0.049250000000000009048 -0.0050000000000000001041" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/vn100_base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
 
-  <joint name="xsens_base_joint" type="fixed">
-    <origin xyz="-0.043769 0.098044 0" rpy="0 0 4.28" />
-    <parent link="base_link" />
-    <child link="xsens_link" />
-  </joint>
-  
-  <joint name="vectornav_base_joint" type="fixed">
-    <origin xyz="0.050787 -0.07252 0.0" rpy="${M_PI} 0 3.49" />
-    <parent link="base_link" />
-    <child link="vectornav_link" />
-  </joint>
-  
-  <joint name="pressure_sensor_base_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="base_link" />
-    <child link="pressure_sensor_link" />
-  </joint>
+<link name="vn100_lid">
+<visual>
+<origin xyz="-0.065560509884864573427 0.039293200000000014227 -0.0078194000000000006556" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/vn100_lid.stl"/>
+</geometry>
+<material name="vn100_lid_material">
+<color rgba="0.86666666666666669627 0.32156862745098041545 0.15686274509803921351 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.065560509884864573427 0.039293200000000014227 -0.0078194000000000006556" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/vn100_lid.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="vn100">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="0" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="vn100_frame" type="fixed">
+<origin xyz="0.0069675361378467026707 -0.011647358283601402795 0.0011983999999999987718" rpy="3.141592653589793116 -0 -1.570796326794896558" />
+<parent link="vn100_lid" />
+<child link="vn100" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<joint name="vectornav_lid_bottom_joint" type="fixed">
+<origin xyz="0.0084581999999999990525 0.0099567999999999948213 0.0038100000000000000186" rpy="0 -0 0" />
+<parent link="vn100_base" />
+<child link="vn100_lid" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="vectornav_base_joint" type="fixed">
+<origin xyz="0.057102309884864574374 -0.049250000000000009048 0.0050000000000000001041" rpy="0 -0 0" />
+<parent link="base_link" />
+<child link="vn100_base" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="robosense_body">
+<visual>
+<origin xyz="-0.18775839615057965393 -0.068404028665133745357 -0.0038499999999999879804" rpy="-1.5777218104420236108e-30 -0 1.9198621771937625091" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/robosense_body.stl"/>
+</geometry>
+<material name="robosense_body_material">
+<color rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.18775839615057965393 -0.068404028665133745357 -0.0038499999999999879804" rpy="-1.5777218104420236108e-30 -0 1.9198621771937625091" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/robosense_body.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="robosense">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="0" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="robosense_frame" type="fixed">
+<origin xyz="4.0991005569076628034e-18 7.0139192117397865123e-18 0.039799999999999995104" rpy="-1.2163952784009486397e-15 7.7862523968783561303e-15 6.7675827027439145299e-16" />
+<parent link="robosense_body" />
+<child link="robosense" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<joint name="robosense_base_joint" type="fixed">
+<origin xyz="0 -1.4094628242311557642e-17 0.0050000000000000001041" rpy="8.3461470693347925284e-16 -7.5882423866817780717e-15 2.7925268031909271649" />
+<parent link="base_link" />
+<child link="robosense_body" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="top_bottom_mount">
+<visual>
+<origin xyz="0.074999999999999997224 0 -0.004999999999999865663" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/top_bottom_mount.stl"/>
+</geometry>
+<material name="top_bottom_mount_material">
+<color rgba="0.2313725490196078538 0.38039215686274507888 0.7058823529411765163 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.074999999999999997224 0 -0.004999999999999865663" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/top_bottom_mount.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="cover">
+<visual>
+<origin xyz="-0.01699078725392301481 -0.083767971770193128123 -0.092499999999999985012" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/cover.stl"/>
+</geometry>
+<material name="cover_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01699078725392301481 -0.083767971770193128123 -0.092499999999999985012" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/cover.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="box">
+<visual>
+<origin xyz="0.075954863599142719011 0.024587798586627261643 -0.090112399999999981404" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/box.stl"/>
+</geometry>
+<material name="box_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.075954863599142719011 0.024587798586627261643 -0.090112399999999981404" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/box.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<joint name="box_rpi_cover" type="fixed">
+<origin xyz="-0.092945650853065747699 -0.10835577035682036895 -0.0023876000000001146306" rpy="0 -0 0" />
+<parent link="cover" />
+<child link="box" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="box_rpi" type="fixed">
+<origin xyz="0.091990787253923012035 -0.083767971770193128123 -0.097499999999999850675" rpy="3.141592653589793116 -0 0" />
+<parent link="top_bottom_mount" />
+<child link="cover" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="extrusions_bottom">
+<visual>
+<origin xyz="-2.8888949165808537796e-34 0.24000000000000001887 0.10000000000000000555" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/extrusions_bottom.stl"/>
+</geometry>
+<material name="extrusions_bottom_material">
+<color rgba="0.53725490196078429239 0.85490196078431368587 0.82745098039215680963 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-2.8888949165808537796e-34 0.24000000000000001887 0.10000000000000000555" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/extrusions_bottom.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="top">
+<visual>
+<origin xyz="0 -0.4000000000000000222 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/top.stl"/>
+</geometry>
+<material name="top_material">
+<color rgba="0.51372549019607838261 0.73725490196078435901 0.40784313725490195512 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 -0.4000000000000000222 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://sphere_description/meshes/top.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<joint name="extrusion_top" type="fixed">
+<origin xyz="0.2000000000000000111 0.040000000000000007772 0.10000000000000000555" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<parent link="extrusions_bottom" />
+<child link="top" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="extrusions_bottom" type="fixed">
+<origin xyz="0.034999999999999989453 -2.8888949165808537796e-34 -0.10384999999999985909" rpy="0 -0 -1.570796326794896558" />
+<parent link="top_bottom_mount" />
+<child link="extrusions_bottom" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="central_plates" type="fixed">
+<origin xyz="-0.074999999999999997224 0 0.004999999999999865663" rpy="0 -0 0" />
+<parent link="base_link" />
+<child link="top_bottom_mount" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
 </robot>
