@@ -11,3 +11,5 @@ cd onshape_to_urdf
 onshape-to-robot .
 ```
 This synchronizes the Onshape project with the robot model, installs the meshes in appropriate locations and cleans the temporary files.
+
+<img width="389" alt="image" src="https://github.com/norlab-ulaval/sphere_description/assets/47394922/5211a38f-82ec-4070-b0a7-fd94016297a7">
