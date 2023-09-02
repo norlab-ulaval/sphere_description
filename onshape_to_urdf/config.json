@@ -1,0 +1,16 @@
+{
+    "documentId": "34c253d4388c73c8ac23ac2e",
+    "outputFormat": "urdf",
+    "assemblyName": "Assembly URDF export",
+    "noDynamics": true,
+    "useFixedLinks": false,
+    "useScads": false,
+    "drawFrames": false,
+    "packageName": "sphere_description/meshes",
+    "robotName": "sphere",
+    "postImportCommands": [
+    	"rm *.part",
+    	"mv robot.urdf ../urdf/sphere.urdf.xacro",
+    	"mv *.stl ../meshes/"
+    ]
+}
