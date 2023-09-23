@@ -11,6 +11,7 @@
     "postImportCommands": [
     	"rm *.part",
     	"mv robot.urdf ../urdf/sphere.urdf.xacro",
-    	"mv *.stl ../meshes/"
+    	"mv *.stl ../meshes/",
+    	"python3 format.py"
     ]
 }
