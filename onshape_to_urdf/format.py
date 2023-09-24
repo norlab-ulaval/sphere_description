@@ -12,7 +12,10 @@ root = tree.getroot()
 def round_string(string):
     values = string.split(" ")
     values = [float(v) for v in values]
-    values = [round(v, 5) for v in values]
+    values = [str(round(v, 5)) for v in values]
+    print(values)
+    values = ' '.join(values)
+    print(values)
     return values
     
 # Function to recursively update text in the XML tree
