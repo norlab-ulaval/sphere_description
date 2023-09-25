@@ -13,7 +13,7 @@ def round_string(string):
     values = string.split(" ")
     values = [float(v) for v in values]
     values = [str(round(v, 5)) for v in values]
-    return values
+    return " ".join(values)
     
 # Function to recursively update text in the XML tree
 def update_text(node):

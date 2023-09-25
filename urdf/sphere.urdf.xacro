@@ -1,22 +1,22 @@
 <?xml version="1.0" ?><robot name="sphere">	
 	<link name="base_link">		
 		<visual>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/lidar_imu_mount.stl"/>				
 			</geometry>			
 			<material name="lidar_imu_mount_material">				
-				<color rgba="['0.90196', '0.90196', '0.90196', '1.0']"/>				
+				<color rgba="0.90196 0.90196 0.90196 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/lidar_imu_mount.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -24,22 +24,22 @@
 
 	<link name="mti30_body">		
 		<visual>			
-			<origin xyz="['-0.10028', '-0.03838', '-0.0068']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="-0.10028 -0.03838 -0.0068" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/mti30_body.stl"/>				
 			</geometry>			
 			<material name="mti30_body_material">				
-				<color rgba="['0.72941', '0.35686', '0.02353', '1.0']"/>				
+				<color rgba="0.72941 0.35686 0.02353 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['-0.10028', '-0.03838', '-0.0068']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="-0.10028 -0.03838 -0.0068" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/mti30_body.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -47,45 +47,45 @@
 
 	<link name="mti30">		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 	<joint name="mti30_frame" type="fixed">		
-		<origin xyz="['-0.03005', '0.00538', '0.01431']" rpy="['-0.0', '-0.0', '0.7854']"/>		
+		<origin xyz="-0.03005 0.00538 0.01431" rpy="-0.0 -0.0 0.7854"/>		
 		<parent link="mti30_body"/>		
 		<child link="mti30"/>		
-		<axis xyz="['0.0', '0.0', '0.0']"/>		
+		<axis xyz="0.0 0.0 0.0"/>		
 	</joint>	
 
 	<joint name="mti30_base_joint" type="fixed">		
-		<origin xyz="['0.10028', '0.03838', '0.0068']" rpy="['0.0', '-0.0', '0.0']"/>		
+		<origin xyz="0.10028 0.03838 0.0068" rpy="0.0 -0.0 0.0"/>		
 		<parent link="base_link"/>		
 		<child link="mti30_body"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="vn100_base">		
 		<visual>			
-			<origin xyz="['-0.0571', '0.04925', '-0.0068']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="-0.0571 0.04925 -0.0068" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/vn100_base.stl"/>				
 			</geometry>			
 			<material name="vn100_base_material">				
-				<color rgba="['0.49804', '0.49804', '0.49804', '1.0']"/>				
+				<color rgba="0.49804 0.49804 0.49804 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['-0.0571', '0.04925', '-0.0068']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="-0.0571 0.04925 -0.0068" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/vn100_base.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -93,22 +93,22 @@
 
 	<link name="vn100_lid">		
 		<visual>			
-			<origin xyz="['-0.06556', '0.03929', '-0.00962']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="-0.06556 0.03929 -0.00962" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/vn100_lid.stl"/>				
 			</geometry>			
 			<material name="vn100_lid_material">				
-				<color rgba="['0.86667', '0.32157', '0.15686', '1.0']"/>				
+				<color rgba="0.86667 0.32157 0.15686 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['-0.06556', '0.03929', '-0.00962']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="-0.06556 0.03929 -0.00962" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/vn100_lid.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -116,54 +116,54 @@
 
 	<link name="vn100">		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 	<joint name="vn100_frame" type="fixed">		
-		<origin xyz="['0.00697', '-0.01165', '0.0012']" rpy="['0.0', '-0.0', '1.5708']"/>		
+		<origin xyz="0.00697 -0.01165 0.0012" rpy="0.0 -0.0 1.5708"/>		
 		<parent link="vn100_lid"/>		
 		<child link="vn100"/>		
-		<axis xyz="['0.0', '0.0', '0.0']"/>		
+		<axis xyz="0.0 0.0 0.0"/>		
 	</joint>	
 
 	<joint name="vectornav_lid_bottom_joint" type="fixed">		
-		<origin xyz="['0.00846', '0.00996', '0.00381']" rpy="['0.0', '-0.0', '0.0']"/>		
+		<origin xyz="0.00846 0.00996 0.00381" rpy="0.0 -0.0 0.0"/>		
 		<parent link="vn100_base"/>		
 		<child link="vn100_lid"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<joint name="vectornav_base_joint" type="fixed">		
-		<origin xyz="['0.0571', '-0.04925', '0.0068']" rpy="['0.0', '-0.0', '0.0']"/>		
+		<origin xyz="0.0571 -0.04925 0.0068" rpy="0.0 -0.0 0.0"/>		
 		<parent link="base_link"/>		
 		<child link="vn100_base"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="rslidar16_body">		
 		<visual>			
-			<origin xyz="['0.18812', '0.0684', '-0.00066']" rpy="['0.0', '-0.0', '-1.22173']"/>			
+			<origin xyz="0.18812 0.0684 -0.00066" rpy="0.0 -0.0 -1.22173"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/rslidar16_body.stl"/>				
 			</geometry>			
 			<material name="rslidar16_body_material">				
-				<color rgba="['0.70196', '0.70196', '0.70196', '1.0']"/>				
+				<color rgba="0.70196 0.70196 0.70196 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.18812', '0.0684', '-0.00066']" rpy="['0.0', '-0.0', '-1.22173']"/>			
+			<origin xyz="0.18812 0.0684 -0.00066" rpy="0.0 -0.0 -1.22173"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/rslidar16_body.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -171,45 +171,45 @@
 
 	<link name="rslidar16">		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 	<joint name="rslidar16_frame" type="fixed">		
-		<origin xyz="['0.0', '0.0', '0.0398']" rpy="['0.0', '0.0', '0.0']"/>		
+		<origin xyz="0.0 0.0 0.0398" rpy="0.0 0.0 0.0"/>		
 		<parent link="rslidar16_body"/>		
 		<child link="rslidar16"/>		
-		<axis xyz="['0.0', '0.0', '0.0']"/>		
+		<axis xyz="0.0 0.0 0.0"/>		
 	</joint>	
 
 	<joint name="rslidar16_base_joint" type="fixed">		
-		<origin xyz="['0.0', '-0.0', '0.0068']" rpy="['-0.0', '-0.0', '2.79253']"/>		
+		<origin xyz="0.0 -0.0 0.0068" rpy="-0.0 -0.0 2.79253"/>		
 		<parent link="base_link"/>		
 		<child link="rslidar16_body"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="top_bottom_mount">		
 		<visual>			
-			<origin xyz="['0.075', '-0.0', '-0.0068']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="0.075 -0.0 -0.0068" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/top_bottom_mount.stl"/>				
 			</geometry>			
 			<material name="top_bottom_mount_material">				
-				<color rgba="['0.23137', '0.38039', '0.70588', '1.0']"/>				
+				<color rgba="0.23137 0.38039 0.70588 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.075', '-0.0', '-0.0068']" rpy="['0.0', '-0.0', '0.0']"/>			
+			<origin xyz="0.075 -0.0 -0.0068" rpy="0.0 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/top_bottom_mount.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -217,22 +217,22 @@
 
 	<link name="cover">		
 		<visual>			
-			<origin xyz="['-0.01688', '-0.08366', '-0.06189']" rpy="['-3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="-0.01688 -0.08366 -0.06189" rpy="-3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/cover.stl"/>				
 			</geometry>			
 			<material name="cover_material">				
-				<color rgba="['0.61569', '0.81176', '0.92941', '1.0']"/>				
+				<color rgba="0.61569 0.81176 0.92941 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['-0.01688', '-0.08366', '-0.06189']" rpy="['-3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="-0.01688 -0.08366 -0.06189" rpy="-3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/cover.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -240,22 +240,22 @@
 
 	<link name="box">		
 		<visual>			
-			<origin xyz="['0.07606', '0.0247', '-0.0595']" rpy="['-3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="0.07606 0.0247 -0.0595" rpy="-3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/box.stl"/>				
 			</geometry>			
 			<material name="box_material">				
-				<color rgba="['0.61569', '0.81176', '0.92941', '1.0']"/>				
+				<color rgba="0.61569 0.81176 0.92941 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.07606', '0.0247', '-0.0595']" rpy="['-3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="0.07606 0.0247 -0.0595" rpy="-3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/box.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -263,54 +263,54 @@
 
 	<link name="dps310">		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 	<joint name="dps310_frame" type="fixed">		
-		<origin xyz="['0.06102', '0.06802', '-0.01803']" rpy="['-1.5708', '0.0', '0.7854']"/>		
+		<origin xyz="0.06102 0.06802 -0.01803" rpy="-1.5708 0.0 0.7854"/>		
 		<parent link="box"/>		
 		<child link="dps310"/>		
-		<axis xyz="['0.0', '0.0', '0.0']"/>		
+		<axis xyz="0.0 0.0 0.0"/>		
 	</joint>	
 
 	<joint name="box_rpi_cover" type="fixed">		
-		<origin xyz="['-0.09295', '-0.10836', '-0.00239']" rpy="['0.0', '-0.0', '-0.0']"/>		
+		<origin xyz="-0.09295 -0.10836 -0.00239" rpy="0.0 -0.0 -0.0"/>		
 		<parent link="cover"/>		
 		<child link="box"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<joint name="box_rpi" type="fixed">		
-		<origin xyz="['0.05801', '0.08377', '-0.06869']" rpy="['-3.14159', '0.0', '-3.14159']"/>		
+		<origin xyz="0.05801 0.08377 -0.06869" rpy="-3.14159 0.0 -3.14159"/>		
 		<parent link="top_bottom_mount"/>		
 		<child link="cover"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="extrusions_bottom">		
 		<visual>			
-			<origin xyz="['-0.0', '0.18', '0.07467']" rpy="['0.0', '-0.0', '-0.0']"/>			
+			<origin xyz="-0.0 0.18 0.07467" rpy="0.0 -0.0 -0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/extrusions_bottom.stl"/>				
 			</geometry>			
 			<material name="extrusions_bottom_material">				
-				<color rgba="['0.75294', '0.75294', '0.75294', '1.0']"/>				
+				<color rgba="0.75294 0.75294 0.75294 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['-0.0', '0.18', '0.07467']" rpy="['0.0', '-0.0', '-0.0']"/>			
+			<origin xyz="-0.0 0.18 0.07467" rpy="0.0 -0.0 -0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/extrusions_bottom.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
@@ -318,146 +318,146 @@
 
 	<link name="extrusions_top">		
 		<visual>			
-			<origin xyz="['0.2', '-0.2', '0.0']" rpy="['3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="0.2 -0.2 0.0" rpy="3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/extrusions_top.stl"/>				
 			</geometry>			
 			<material name="extrusions_top_material">				
-				<color rgba="['0.75294', '0.75294', '0.75294', '1.0']"/>				
+				<color rgba="0.75294 0.75294 0.75294 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.2', '-0.2', '0.0']" rpy="['3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="0.2 -0.2 0.0" rpy="3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/extrusions_top.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 
 	<joint name="extrusions_top" type="fixed">		
-		<origin xyz="['-0.2', '-0.02', '0.07467']" rpy="['-3.14159', '-0.0', '-0.0']"/>		
+		<origin xyz="-0.2 -0.02 0.07467" rpy="-3.14159 -0.0 -0.0"/>		
 		<parent link="extrusions_bottom"/>		
 		<child link="extrusions_top"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="eyebolt">		
 		<visual>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/eyebolt.stl"/>				
 			</geometry>			
 			<material name="eyebolt_material">				
-				<color rgba="['0.64706', '0.64706', '0.64706', '1.0']"/>				
+				<color rgba="0.64706 0.64706 0.64706 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['3.14159', '-0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="3.14159 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/eyebolt.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 
 	<joint name="eyebolt" type="fixed">		
-		<origin xyz="['0.0', '-0.02', '-0.12533']" rpy="['0.0', '0.0', '-1.5708']"/>		
+		<origin xyz="0.0 -0.02 -0.12533" rpy="0.0 0.0 -1.5708"/>		
 		<parent link="extrusions_bottom"/>		
 		<child link="eyebolt"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="sheetmetal_2batteries_cover">		
 		<visual>			
-			<origin xyz="['-0.00899', '-0.0', '0.009']" rpy="['-1.5708', '-0.0', '0.0']"/>			
+			<origin xyz="-0.00899 -0.0 0.009" rpy="-1.5708 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/sheetmetal_2batteries_cover.stl"/>				
 			</geometry>			
 			<material name="sheetmetal_2batteries_cover_material">				
-				<color rgba="['0.97255', '0.52941', '0.00392', '1.0']"/>				
+				<color rgba="0.97255 0.52941 0.00392 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['-0.00899', '-0.0', '0.009']" rpy="['-1.5708', '-0.0', '0.0']"/>			
+			<origin xyz="-0.00899 -0.0 0.009" rpy="-1.5708 -0.0 0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/sheetmetal_2batteries_cover.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 
 	<joint name="battery_box" type="fixed">		
-		<origin xyz="['-0.01', '-0.02582', '-0.0']" rpy="['-1.5708', '0.0', '-1.5708']"/>		
+		<origin xyz="-0.01 -0.02582 -0.0" rpy="-1.5708 0.0 -1.5708"/>		
 		<parent link="extrusions_bottom"/>		
 		<child link="sheetmetal_2batteries_cover"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<joint name="extrusions_bottom" type="fixed">		
-		<origin xyz="['0.095', '-0.0', '-0.07533']" rpy="['0.0', '-0.0', '-1.5708']"/>		
+		<origin xyz="0.095 -0.0 -0.07533" rpy="0.0 -0.0 -1.5708"/>		
 		<parent link="top_bottom_mount"/>		
 		<child link="extrusions_bottom"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<link name="lidar_box">		
 		<visual>			
-			<origin xyz="['0.057', '-0.02011', '0.0']" rpy="['3.14159', '-0.0', '-0.0']"/>			
+			<origin xyz="0.057 -0.02011 0.0" rpy="3.14159 -0.0 -0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/lidar_box.stl"/>				
 			</geometry>			
 			<material name="lidar_box_material">				
-				<color rgba="['0.61569', '0.81176', '0.92941', '1.0']"/>				
+				<color rgba="0.61569 0.81176 0.92941 1.0"/>				
 			</material>			
 		</visual>		
 		<collision>			
-			<origin xyz="['0.057', '-0.02011', '0.0']" rpy="['3.14159', '-0.0', '-0.0']"/>			
+			<origin xyz="0.057 -0.02011 0.0" rpy="3.14159 -0.0 -0.0"/>			
 			<geometry>				
 				<mesh filename="package://sphere_description/meshes/lidar_box.stl"/>				
 			</geometry>			
 		</collision>		
 		<inertial>			
-			<origin xyz="['0.0', '0.0', '0.0']" rpy="['0.0', '0.0', '0.0']"/>			
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
 	</link>	
 
 	<joint name="lidar_box" type="fixed">		
-		<origin xyz="['0.132', '-0.06111', '-0.07533']" rpy="['0.0', '0.0', '-3.14159']"/>		
+		<origin xyz="0.132 -0.06111 -0.07533" rpy="0.0 0.0 -3.14159"/>		
 		<parent link="top_bottom_mount"/>		
 		<child link="lidar_box"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
 	<joint name="central_plates" type="fixed">		
-		<origin xyz="['0.075', '0.0', '0.0068']" rpy="['0.0', '-0.0', '3.14159']"/>		
+		<origin xyz="0.075 0.0 0.0068" rpy="0.0 -0.0 3.14159"/>		
 		<parent link="base_link"/>		
 		<child link="top_bottom_mount"/>		
-		<axis xyz="['0.0', '0.0', '1.0']"/>		
+		<axis xyz="0.0 0.0 1.0"/>		
 		<limit effort="1" velocity="20"/>		
 		<joint_properties friction="0.0"/>		
 	</joint>	
