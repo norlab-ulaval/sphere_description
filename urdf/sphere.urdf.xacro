@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><robot name="sphere">	
+<?xml version="1.0" ?><robot name="sphere">
 	<link name="base_link">		
 		<visual>			
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>			
@@ -259,21 +259,7 @@
 			<mass value="0"/>			
 			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
 		</inertial>		
-	</link>	
-
-	<link name="dps310">		
-		<inertial>			
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>			
-			<mass value="0"/>			
-			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>			
-		</inertial>		
-	</link>	
-	<joint name="dps310_frame" type="fixed">		
-		<origin xyz="0.06102 0.06802 -0.01803" rpy="-1.5708 0.0 0.7854"/>		
-		<parent link="box"/>		
-		<child link="dps310"/>		
-		<axis xyz="0.0 0.0 0.0"/>		
-	</joint>	
+	</link>
 
 	<joint name="box_rpi_cover" type="fixed">		
 		<origin xyz="-0.09295 -0.10836 -0.00239" rpy="0.0 -0.0 -0.0"/>		
@@ -462,5 +448,11 @@
 		<joint_properties friction="0.0"/>		
 	</joint>	
 
+    <link name="dps310" />
+    <joint name="dps310_frame" type="fixed">
+        <origin xyz="0.034955 -0.040486 -0.09265" rpy="0 0 0" />
+        <parent link="rslidar16" />
+        <child link="dps310" />
+    </joint>
 
 </robot>
